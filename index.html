@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Napoli & Co. - Authentic Wood-Fired Pizza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* RESTAURANT DESIGN SYSTEM */
+    :root { 
+      --primary: #DC2626; /* Red-600 */
+      --secondary: #F59E0B; /* Amber-500 */
+      --dark: #1C1917; /* Stone-900 */
+      --light: #FFF7ED; /* Orange-50 */
+    }
+    .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-body { font-family: 'Inter', sans-serif; }
+    
+    .gradient-text { 
+      background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+    }
+    
+    .glass { 
+      backdrop-filter: blur(16px); 
+      background: rgba(255,255,255,0.9); 
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    /* ANIMATIONS */
+    .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+    .animate-slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; transform: translateY(30px); }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    
+    @keyframes fadeIn { to { opacity: 1; } }
+    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+    
+    /* COMPONENTS */
+    .nav-link { position: relative; font-weight: 500; color: #444; }
+    .nav-link::after { 
+      content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; 
+      background: var(--primary); transition: width 0.3s; 
+    }
+    .nav-link:hover { color: var(--primary); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link.active { color: var(--primary); }
+    .nav-link.active::after { width: 100%; }
+    
+    .btn-primary { 
+      background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+      color: white;
+      box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3); 
+    }
+    .btn-primary:hover { 
+      transform: translateY(-2px); 
+      box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4); 
+    }
+    
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
+    
+    .hero-pattern {
+      background-image: radial-gradient(var(--secondary) 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.1;
+    }
+  </style>
+</head>
+<body class="font-body text-gray-800 bg-orange-50/30 selection:bg-red-100 selection:text-red-900">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 group-hover:scale-110 transition-transform">
+            <i class="fas fa-pizza-slice"></i>
+          </div>
+          <span class="text-2xl font-bold font-heading text-gray-900 tracking-tight">Napoli<span class="text-red-600">&</span>Co.</span>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="about.html" class="nav-link">Our Story</a>
+          <a href="services.html" class="nav-link">Menu & Services</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="services.html" class="btn-primary px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2">
+            Order Online <i class="fas fa-motorcycle"></i>
+          </a>
+        </div>
+        
+        <button class="md:hidden text-gray-600 text-2xl"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="min-h-screen flex items-center pt-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-red-50 -z-20"></div>
+    <div class="absolute inset-0 hero-pattern -z-10"></div>
+    
+    <!-- Floating Elements -->
+    <div class="absolute top-32 left-10 text-orange-200 text-6xl opacity-40 animate-pulse"><i class="fas fa-leaf"></i></div>
+    <div class="absolute bottom-20 right-10 text-red-200 text-8xl opacity-40 animate-pulse" style="animation-delay: 1.5s;"><i class="fas fa-pepper-hot"></i></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="animate-slide-up">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-bold mb-6">
+            <i class="fas fa-fire"></i> Wood Fired Since 1998
+          </div>
+          <h1 class="text-5xl lg:text-7xl font-bold font-heading text-gray-900 leading-[1.1] mb-6">
+            Authentic Taste in <br/><span class="gradient-text">Every Slice</span>
+          </h1>
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
+            Hand-tossed dough, San Marzano tomatoes, and 24-hour fermentation. Experience the true taste of Naples right here in the city.
+          </p>
+          <div class="flex flex-wrap gap-4 items-center">
+            <a href="services.html" class="btn-primary px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl shadow-red-500/20">
+              View Menu
+            </a>
+            <a href="about.html" class="bg-white text-gray-900 px-10 py-5 rounded-full font-extrabold text-2xl border-2 border-gray-100 hover:border-red-200 hover:bg-red-50 transition-all duration-300">
+              Our Story...
+            </a>
+          </div>
+          
+          <div class="mt-12 flex items-center gap-4 text-sm font-medium text-gray-500">
+            <div class="flex -space-x-3">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
+            </div>
+            <p>Loved by <span class="text-gray-900 font-bold">5,000+</span> happy foodies</p>
+          </div>
+        </div>
+        
+        <div class="relative animate-fade-in delay-200">
+          <div class="absolute inset-0 bg-gradient-to-tr from-red-600 to-orange-400 rounded-full filter blur-[100px] opacity-20"></div>
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&h=800&fit=crop" alt="Delicious Pizza" class="relative z-10 w-full h-auto rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-all duration-700">
+          
+          <!-- Floating Badge -->
+          <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl z-20 animate-bounce" style="animation-duration: 3s;">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xl">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 font-bold uppercase">Delivery</div>
+                <div class="text-lg font-bold text-gray-900">Under 30 Min</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES PREVIEW -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-red-600 font-bold text-sm uppercase tracking-widest">The Napoli Difference</span>
+        <h2 class="text-4xl font-bold font-heading text-gray-900 mt-3">Why We're The Best</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="card-hover p-8 rounded-3xl bg-orange-50/50 border border-orange-100 text-center">
+          <div class="w-16 h-16 mx-auto bg-white rounded-2xl shadow-lg flex items-center justify-center text-3xl text-red-500 mb-6">
+            <i class="fas fa-wheat"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Organic Flour</h3>
+          <p class="text-gray-600">Imported directly from Italy, our flour is 100% organic and stone-ground for texture.</p>
+        </div>
+        
+        <div class="card-hover p-8 rounded-3xl bg-red-50/50 border border-red-100 text-center">
+          <div class="w-16 h-16 mx-auto bg-white rounded-2xl shadow-lg flex items-center justify-center text-3xl text-red-500 mb-6">
+            <i class="fas fa-temperature-high"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">900° Wood Oven</h3>
+          <p class="text-gray-600">Cooked in 90 seconds flat to achieve that perfect leopard-spotted crust.</p>
+        </div>
+        
+        <div class="card-hover p-8 rounded-3xl bg-green-50/50 border border-green-100 text-center">
+          <div class="w-16 h-16 mx-auto bg-white rounded-2xl shadow-lg flex items-center justify-center text-3xl text-red-500 mb-6">
+            <i class="fas fa-carrot"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Farm Fresh</h3>
+          <p class="text-gray-600">We partner with local farmers to ensure every topping is picked at peak freshness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU PREVIEW (Services) -->
+  <section class="py-24 bg-stone-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex justify-between items-end mb-16">
+        <div>
+          <h2 class="text-4xl font-bold font-heading mb-4">Customer Favorites</h2>
+          <p class="text-gray-400">The pies that put us on the map.</p>
+        </div>
+        <a href="services.html" class="hidden md:inline-flex items-center text-amber-500 hover:text-amber-400 font-bold transition">View Full Menu <i class="fas fa-arrow-right ml-2"></i></a>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Item 1 -->
+        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&h=400&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Margherita">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold">Classic Margherita</h3>
+              <span class="text-amber-500 font-bold">$18</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">San Marzano tomato sauce, fresh mozzarella di bufala, basil, extra virgin olive oil.</p>
+            <button class="w-full py-2 rounded-lg border border-white/20 hover:bg-white hover:text-black transition font-medium">Add to Order</button>
+          </div>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&h=400&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Pepperoni">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold">Double Pepperoni</h3>
+              <span class="text-amber-500 font-bold">$22</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">Crispy cup pepperoni, mozzarella blend, hot honey drizzle, oregano.</p>
+            <button class="w-full py-2 rounded-lg border border-white/20 hover:bg-white hover:text-black transition font-medium">Add to Order</button>
+          </div>
+        </div>
+        
+        <!-- Item 3 -->
+        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&h=400&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Truffle">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold">Truffle & Mushroom</h3>
+              <span class="text-amber-500 font-bold">$24</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">Wild mushrooms, truffle cream, thyme, garlic confit, parmesan shavings.</p>
+            <button class="w-full py-2 rounded-lg border border-white/20 hover:bg-white hover:text-black transition font-medium">Add to Order</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center md:hidden">
+        <a href="services.html" class="btn-primary px-8 py-3 rounded-full">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="py-20 bg-red-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-red-500/50">
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold font-heading mb-2">25+</div>
+          <div class="text-red-100 text-sm uppercase tracking-wider">Years Baking</div>
+        </div>
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold font-heading mb-2">1M+</div>
+          <div class="text-red-100 text-sm uppercase tracking-wider">Pizzas Served</div>
+        </div>
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold font-heading mb-2">15</div>
+          <div class="text-red-100 text-sm uppercase tracking-wider">Awards Won</div>
+        </div>
+        <div>
+          <div class="text-4xl lg:text-5xl font-bold font-heading mb-2">4.9</div>
+          <div class="text-red-100 text-sm uppercase tracking-wider">Average Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-orange-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-4xl lg:text-6xl font-bold font-heading text-gray-900 mb-6">Hungry Yet?</h2>
+      <p class="text-xl text-gray-600 mb-10">Order now and get 15% off your first online order. Hot, fresh, and delicious.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="services.html" class="btn-primary text-white px-10 py-4 rounded-full font-bold text-lg">Order Now</a>
+        <a href="contact.html" class="bg-white text-gray-900 px-10 py-4 rounded-full font-bold text-lg border hover:bg-gray-50 transition">Book a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white pt-20 pb-10 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-1 md:col-span-1">
+          <a href="index.html" class="text-2xl font-bold font-heading mb-6 block">Napoli<span class="text-red-500">&</span>Co.</a>
+          <p class="text-gray-400 mb-6">Authentic Neapolitan pizza made with passion and tradition since 1998.</p>
+          <div class="flex gap-4">
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">Our Story</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Menu & Catering</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-lg mb-6">Contact</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1 text-red-500"></i> 123 Pizza Lane, Food City, FC 90210</li>
+            <li class="flex items-center gap-3"><i class="fas fa-phone text-red-500"></i> (555) 123-PIZZA</li>
+            <li class="flex items-center gap-3"><i class="fas fa-envelope text-red-500"></i> ciao@napolico.com</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-lg mb-6">Opening Hours</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex justify-between"><span>Mon - Thu:</span> <span>11am - 10pm</span></li>
+            <li class="flex justify-between"><span>Fri - Sat:</span> <span>11am - 11pm</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span>12pm - 9:30pm</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 Napoli & Co. Pizzeria. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+(function() {
+  const fallbackImages = ["1522071820080-37f2cb85c41d","1497366216548-37526070297c","1556761175-4bda37b9dd37","1556761175-b4136fa58510","1552664736-d46ed1db83d9","1556761175-5973dc0f32e7","1556761175-5973dc0f32e8","1556761175-5973dc0f32e9","1556761175-5973dc0f32ea","1556761175-5973dc0f32eb"];
+  let fallbackIndex = 0;
+  
+  function getFallbackImageUrl() {
+    if (fallbackIndex >= fallbackImages.length) {
+      fallbackIndex = 0;
+    }
+    const imageId = fallbackImages[fallbackIndex];
+    fallbackIndex++;
+    return 'https://images.unsplash.com/' + imageId + '?w=800&h=600&fit=crop';
+  }
+  
+  function handleImageError(img) {
+    const originalSrc = img.getAttribute('data-original-src') || img.src;
+    
+    if (!img.getAttribute('data-original-src')) {
+      img.setAttribute('data-original-src', originalSrc);
+      img.setAttribute('data-fallback-attempts', '0');
+    }
+    
+    const attempts = parseInt(img.getAttribute('data-fallback-attempts') || '0');
+    
+    if (attempts < 5) {
+      img.setAttribute('data-fallback-attempts', (attempts + 1).toString());
+      img.src = getFallbackImageUrl();
+    } else {
+      img.style.display = 'none';
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+      if (!img.onerror) {
+        img.onerror = function() { handleImageError(img); };
+      }
+    });
+  });
+  
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) {
+          if (node.tagName === 'IMG') {
+            node.onerror = function() { handleImageError(node); };
+          }
+          const images = node.querySelectorAll && node.querySelectorAll('img');
+          if (images) {
+            images.forEach(function(img) {
+              if (!img.onerror) {
+                img.onerror = function() { handleImageError(img); };
+              }
+            });
+          }
+        }
+      });
+    });
+  });
+  
+  observer.observe(document.body || document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script>
+<script>
+(function() {
+  const fallbackImages = ["1522071820080-37f2cb85c41d","1497366216548-37526070297c","1556761175-4bda37b9dd37","1556761175-b4136fa58510","1552664736-d46ed1db83d9","1556761175-5973dc0f32e7","1556761175-5973dc0f32e8","1556761175-5973dc0f32e9","1556761175-5973dc0f32ea","1556761175-5973dc0f32eb"];
+  let fallbackIndex = 0;
+  
+  function getFallbackImageUrl() {
+    if (fallbackIndex >= fallbackImages.length) {
+      fallbackIndex = 0;
+    }
+    const imageId = fallbackImages[fallbackIndex];
+    fallbackIndex++;
+    return 'https://images.unsplash.com/' + imageId + '?w=800&h=600&fit=crop';
+  }
+  
+  function handleImageError(img) {
+    const originalSrc = img.getAttribute('data-original-src') || img.src;
+    
+    if (!img.getAttribute('data-original-src')) {
+      img.setAttribute('data-original-src', originalSrc);
+      img.setAttribute('data-fallback-attempts', '0');
+    }
+    
+    const attempts = parseInt(img.getAttribute('data-fallback-attempts') || '0');
+    
+    if (attempts < 5) {
+      img.setAttribute('data-fallback-attempts', (attempts + 1).toString());
+      img.src = getFallbackImageUrl();
+    } else {
+      img.style.display = 'none';
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+      if (!img.onerror) {
+        img.onerror = function() { handleImageError(img); };
+      }
+    });
+  });
+  
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) {
+          if (node.tagName === 'IMG') {
+            node.onerror = function() { handleImageError(node); };
+          }
+          const images = node.querySelectorAll && node.querySelectorAll('img');
+          if (images) {
+            images.forEach(function(img) {
+              if (!img.onerror) {
+                img.onerror = function() { handleImageError(img); };
+              }
+            });
+          }
+        }
+      });
+    });
+  });
+  
+  observer.observe(document.body || document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script></body>
+</html>
