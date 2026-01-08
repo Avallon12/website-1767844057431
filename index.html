@@ -1,76 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Napoli & Co. - Authentic Wood-Fired Pizza</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Avallon&Co. - Authentic Wood-Fired Pizza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* RESTAURANT DESIGN SYSTEM */
-    :root { 
-      --primary: #DC2626; /* Red-600 */
-      --secondary: #F59E0B; /* Amber-500 */
-      --dark: #1C1917; /* Stone-900 */
-      --light: #FFF7ED; /* Orange-50 */
-    }
-    .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .font-body { font-family: 'Inter', sans-serif; }
-    
-    .gradient-text { 
-      background: linear-gradient(135deg, var(--primary), var(--secondary)); 
-      -webkit-background-clip: text; 
-      -webkit-text-fill-color: transparent; 
-    }
-    
-    .glass { 
-      backdrop-filter: blur(16px); 
-      background: rgba(255,255,255,0.9); 
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-    
-    /* ANIMATIONS */
-    .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
-    .animate-slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; transform: translateY(30px); }
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-300 { animation-delay: 0.3s; }
-    
-    @keyframes fadeIn { to { opacity: 1; } }
-    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
-    
-    /* COMPONENTS */
-    .nav-link { position: relative; font-weight: 500; color: #444; }
-    .nav-link::after { 
-      content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; 
-      background: var(--primary); transition: width 0.3s; 
-    }
-    .nav-link:hover { color: var(--primary); }
-    .nav-link:hover::after { width: 100%; }
-    .nav-link.active { color: var(--primary); }
-    .nav-link.active::after { width: 100%; }
-    
-    .btn-primary { 
-      background: linear-gradient(135deg, var(--primary), var(--secondary)); 
-      color: white;
-      box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3); 
-    }
-    .btn-primary:hover { 
-      transform: translateY(-2px); 
-      box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4); 
-    }
-    
-    .card-hover { transition: all 0.3s ease; }
-    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
-    
-    .hero-pattern {
-      background-image: radial-gradient(var(--secondary) 1px, transparent 1px);
-      background-size: 30px 30px;
-      opacity: 0.1;
-    }
-  </style>
-</head>
+  </head>
 <body class="font-body text-gray-800 bg-orange-50/30 selection:bg-red-100 selection:text-red-900">
 
   <!-- NAVIGATION -->
@@ -81,13 +16,13 @@
           <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 group-hover:scale-110 transition-transform">
             <i class="fas fa-pizza-slice"></i>
           </div>
-          <span class="text-2xl font-bold font-heading text-gray-900 tracking-tight">Napoli<span class="text-red-600">&</span>Co.</span>
+          <span class="text-2xl font-bold font-heading text-gray-900 tracking-tight">Avallon&amp;Co.</span>
         </a>
         
         <div class="hidden md:flex items-center space-x-8">
           <a href="index.html" class="nav-link active">Home</a>
           <a href="about.html" class="nav-link">Our Story</a>
-          <a href="services.html" class="nav-link">Menu & Services</a>
+          <a href="services.html" class="nav-link">Menu &amp; Services</a>
           <a href="contact.html" class="nav-link">Contact</a>
           <a href="services.html" class="btn-primary px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2">
             Order Online <i class="fas fa-motorcycle"></i>
@@ -115,7 +50,7 @@
             <i class="fas fa-fire"></i> Wood Fired Since 1998
           </div>
           <h1 class="text-5xl lg:text-7xl font-bold font-heading text-gray-900 leading-[1.1] mb-6">
-            Authentic Taste in <br/><span class="gradient-text">Every Slice</span>
+            Authentic Taste in <br><span class="gradient-text">Every Slice</span>
           </h1>
           <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
             Hand-tossed dough, San Marzano tomatoes, and 24-hour fermentation. Experience the true taste of Naples right here in the city.
@@ -131,9 +66,9 @@
           
           <div class="mt-12 flex items-center gap-4 text-sm font-medium text-gray-500">
             <div class="flex -space-x-3">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
-              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&amp;h=100&amp;fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&amp;h=100&amp;fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&amp;h=100&amp;fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Customer">
             </div>
             <p>Loved by <span class="text-gray-900 font-bold">5,000+</span> happy foodies</p>
           </div>
@@ -141,7 +76,7 @@
         
         <div class="relative animate-fade-in delay-200">
           <div class="absolute inset-0 bg-gradient-to-tr from-red-600 to-orange-400 rounded-full filter blur-[100px] opacity-20"></div>
-          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&h=800&fit=crop" alt="Delicious Pizza" class="relative z-10 w-full h-auto rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-all duration-700">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&amp;h=800&amp;fit=crop" alt="Delicious Pizza" class="relative z-10 w-full h-auto rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-all duration-700">
           
           <!-- Floating Badge -->
           <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl z-20 animate-bounce" style="animation-duration: 3s;">
@@ -164,7 +99,7 @@
   <section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <span class="text-red-600 font-bold text-sm uppercase tracking-widest">The Napoli Difference</span>
+        <span class="text-red-600 font-bold text-sm uppercase tracking-widest">The Avallon Difference</span>
         <h2 class="text-4xl font-bold font-heading text-gray-900 mt-3">Why We're The Best</h2>
       </div>
       
@@ -212,7 +147,7 @@
         <!-- Item 1 -->
         <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300">
           <div class="h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&h=400&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Margherita">
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&amp;h=400&amp;fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Margherita">
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start mb-2">
@@ -227,7 +162,7 @@
         <!-- Item 2 -->
         <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300">
           <div class="h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&h=400&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Pepperoni">
+            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&amp;h=400&amp;fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Pepperoni">
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start mb-2">
@@ -242,11 +177,11 @@
         <!-- Item 3 -->
         <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300">
           <div class="h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&h=400&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Truffle">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&amp;h=400&amp;fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Truffle">
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start mb-2">
-              <h3 class="text-xl font-bold">Truffle & Mushroom</h3>
+              <h3 class="text-xl font-bold">Truffle &amp; Mushroom</h3>
               <span class="text-amber-500 font-bold">$24</span>
             </div>
             <p class="text-gray-400 text-sm mb-4">Wild mushrooms, truffle cream, thyme, garlic confit, parmesan shavings.</p>
@@ -302,7 +237,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-4 gap-12 mb-16">
         <div class="col-span-1 md:col-span-1">
-          <a href="index.html" class="text-2xl font-bold font-heading mb-6 block">Napoli<span class="text-red-500">&</span>Co.</a>
+          <a href="index.html" class="text-2xl font-bold font-heading mb-6 block">Avallon<span class="text-red-500">&amp;</span>Co.</a>
           <p class="text-gray-400 mb-6">Authentic Neapolitan pizza made with passion and tradition since 1998.</p>
           <div class="flex gap-4">
             <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-instagram"></i></a>
@@ -316,7 +251,7 @@
           <ul class="space-y-3 text-gray-400">
             <li><a href="index.html" class="hover:text-white transition">Home</a></li>
             <li><a href="about.html" class="hover:text-white transition">Our Story</a></li>
-            <li><a href="services.html" class="hover:text-white transition">Menu & Catering</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Menu &amp; Catering</a></li>
             <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
           </ul>
         </div>
@@ -326,7 +261,7 @@
           <ul class="space-y-3 text-gray-400">
             <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1 text-red-500"></i> 123 Pizza Lane, Food City, FC 90210</li>
             <li class="flex items-center gap-3"><i class="fas fa-phone text-red-500"></i> (555) 123-PIZZA</li>
-            <li class="flex items-center gap-3"><i class="fas fa-envelope text-red-500"></i> ciao@napolico.com</li>
+            <li class="flex items-center gap-3"><i class="fas fa-envelope text-red-500"></i> ciao@avallonco.com</li>
           </ul>
         </div>
         
@@ -341,143 +276,11 @@
       </div>
       
       <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-        <p>&copy; 2024 Napoli & Co. Pizzeria. All rights reserved.</p>
+        <p>© 2024 Avallon&Co. Pizzeria. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-<script>
-(function() {
-  const fallbackImages = ["1522071820080-37f2cb85c41d","1497366216548-37526070297c","1556761175-4bda37b9dd37","1556761175-b4136fa58510","1552664736-d46ed1db83d9","1556761175-5973dc0f32e7","1556761175-5973dc0f32e8","1556761175-5973dc0f32e9","1556761175-5973dc0f32ea","1556761175-5973dc0f32eb"];
-  let fallbackIndex = 0;
-  
-  function getFallbackImageUrl() {
-    if (fallbackIndex >= fallbackImages.length) {
-      fallbackIndex = 0;
-    }
-    const imageId = fallbackImages[fallbackIndex];
-    fallbackIndex++;
-    return 'https://images.unsplash.com/' + imageId + '?w=800&h=600&fit=crop';
-  }
-  
-  function handleImageError(img) {
-    const originalSrc = img.getAttribute('data-original-src') || img.src;
-    
-    if (!img.getAttribute('data-original-src')) {
-      img.setAttribute('data-original-src', originalSrc);
-      img.setAttribute('data-fallback-attempts', '0');
-    }
-    
-    const attempts = parseInt(img.getAttribute('data-fallback-attempts') || '0');
-    
-    if (attempts < 5) {
-      img.setAttribute('data-fallback-attempts', (attempts + 1).toString());
-      img.src = getFallbackImageUrl();
-    } else {
-      img.style.display = 'none';
-    }
-  }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
-    images.forEach(function(img) {
-      if (!img.onerror) {
-        img.onerror = function() { handleImageError(img); };
-      }
-    });
-  });
-  
-  const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      mutation.addedNodes.forEach(function(node) {
-        if (node.nodeType === 1) {
-          if (node.tagName === 'IMG') {
-            node.onerror = function() { handleImageError(node); };
-          }
-          const images = node.querySelectorAll && node.querySelectorAll('img');
-          if (images) {
-            images.forEach(function(img) {
-              if (!img.onerror) {
-                img.onerror = function() { handleImageError(img); };
-              }
-            });
-          }
-        }
-      });
-    });
-  });
-  
-  observer.observe(document.body || document.documentElement, {
-    childList: true,
-    subtree: true
-  });
-})();
-</script>
-<script>
-(function() {
-  const fallbackImages = ["1522071820080-37f2cb85c41d","1497366216548-37526070297c","1556761175-4bda37b9dd37","1556761175-b4136fa58510","1552664736-d46ed1db83d9","1556761175-5973dc0f32e7","1556761175-5973dc0f32e8","1556761175-5973dc0f32e9","1556761175-5973dc0f32ea","1556761175-5973dc0f32eb"];
-  let fallbackIndex = 0;
-  
-  function getFallbackImageUrl() {
-    if (fallbackIndex >= fallbackImages.length) {
-      fallbackIndex = 0;
-    }
-    const imageId = fallbackImages[fallbackIndex];
-    fallbackIndex++;
-    return 'https://images.unsplash.com/' + imageId + '?w=800&h=600&fit=crop';
-  }
-  
-  function handleImageError(img) {
-    const originalSrc = img.getAttribute('data-original-src') || img.src;
-    
-    if (!img.getAttribute('data-original-src')) {
-      img.setAttribute('data-original-src', originalSrc);
-      img.setAttribute('data-fallback-attempts', '0');
-    }
-    
-    const attempts = parseInt(img.getAttribute('data-fallback-attempts') || '0');
-    
-    if (attempts < 5) {
-      img.setAttribute('data-fallback-attempts', (attempts + 1).toString());
-      img.src = getFallbackImageUrl();
-    } else {
-      img.style.display = 'none';
-    }
-  }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
-    images.forEach(function(img) {
-      if (!img.onerror) {
-        img.onerror = function() { handleImageError(img); };
-      }
-    });
-  });
-  
-  const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      mutation.addedNodes.forEach(function(node) {
-        if (node.nodeType === 1) {
-          if (node.tagName === 'IMG') {
-            node.onerror = function() { handleImageError(node); };
-          }
-          const images = node.querySelectorAll && node.querySelectorAll('img');
-          if (images) {
-            images.forEach(function(img) {
-              if (!img.onerror) {
-                img.onerror = function() { handleImageError(img); };
-              }
-            });
-          }
-        }
-      });
-    });
-  });
-  
-  observer.observe(document.body || document.documentElement, {
-    childList: true,
-    subtree: true
-  });
-})();
-</script></body>
-</html>
+
+
+</body></html>
