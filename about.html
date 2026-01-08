@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story - Napoli & Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary: #DC2626; --secondary: #F59E0B; --dark: #1C1917; }
+    .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-body { font-family: 'Inter', sans-serif; }
+    .gradient-text { background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .glass { backdrop-filter: blur(16px); background: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .nav-link { position: relative; font-weight: 500; color: #444; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--primary); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link.active { color: var(--primary); }
+    .nav-link.active::after { width: 100%; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4); }
+  </style>
+</head>
+<body class="font-body text-gray-800 bg-orange-50/30">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 group-hover:scale-110 transition-transform">
+            <i class="fas fa-pizza-slice"></i>
+          </div>
+          <span class="text-2xl font-bold font-heading text-gray-900 tracking-tight">Napoli<span class="text-red-600">&</span>Co.</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link active">Our Story</a>
+          <a href="services.html" class="nav-link">Menu & Services</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="services.html" class="btn-primary px-6 py-3 rounded-full font-semibold transition-all duration-300">Order Online</a>
+        </div>
+        <button class="md:hidden text-gray-600 text-2xl"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-red-600 font-bold tracking-wider uppercase text-sm">Established 1998</span>
+          <h1 class="text-5xl lg:text-6xl font-bold font-heading text-gray-900 mt-4 mb-6">More Than Just <br><span class="gradient-text">Flour & Water</span></h1>
+          <p class="text-xl text-gray-600 mb-6 leading-relaxed">It started with a small brick oven in a backyard in Naples. Today, Napoli & Co. brings that same authentic tradition to your table.</p>
+          <p class="text-gray-600 mb-8 leading-relaxed">We believe that great pizza requires patience. That's why our dough is fermented for 48 hours, our tomatoes are vine-ripened, and our mozzarella is made fresh daily.</p>
+          <div class="flex items-center gap-4">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?w=100&h=100&fit=crop" class="w-16 h-16 rounded-full border-2 border-red-100" alt="Founder">
+            <div>
+              <div class="font-bold text-gray-900">Giovanni Rossi</div>
+              <div class="text-sm text-gray-500">Founder & Head Chef</div>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Signature_sample.svg" class="h-10 opacity-50 ml-4" alt="Signature">
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -top-4 -left-4 w-24 h-24 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl"></div>
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-red-100 rounded-full mix-blend-multiply filter blur-xl"></div>
+          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=1000&fit=crop" class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[600px]" alt="Chef making pizza">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION VALUES -->
+  <section class="py-24 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold font-heading">Our Core Values</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition">
+          <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center text-xl mb-6"><i class="fas fa-heart"></i></div>
+          <h3 class="text-xl font-bold mb-3">Passion First</h3>
+          <p class="text-gray-400">We don't just bake pizzas; we craft experiences. Every ingredient is chosen with love and care.</p>
+        </div>
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition">
+          <div class="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center text-xl mb-6"><i class="fas fa-users"></i></div>
+          <h3 class="text-xl font-bold mb-3">Community</h3>
+          <p class="text-gray-400">We are more than a restaurant; we are a gathering place for friends, families, and neighbors.</p>
+        </div>
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition">
+          <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center text-xl mb-6"><i class="fas fa-leaf"></i></div>
+          <h3 class="text-xl font-bold mb-3">Sustainability</h3>
+          <p class="text-gray-400">From locally sourced produce to eco-friendly packaging, we care for our planet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="py-24 bg-orange-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold font-heading text-gray-900">Meet the Maestros</h2>
+        <p class="text-gray-600 mt-4">The hands behind the dough.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition text-center">
+          <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=400&h=400&fit=crop" class="w-full h-64 object-cover rounded-xl mb-4" alt="Chef">
+          <h3 class="text-lg font-bold text-gray-900">Marco V.</h3>
+          <p class="text-red-600 text-sm font-medium">Head Pizzaiolo</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition text-center">
+          <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=400&h=400&fit=crop" class="w-full h-64 object-cover rounded-xl mb-4" alt="Chef">
+          <h3 class="text-lg font-bold text-gray-900">Elena S.</h3>
+          <p class="text-red-600 text-sm font-medium">Sous Chef</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition text-center">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" class="w-full h-64 object-cover rounded-xl mb-4" alt="Manager">
+          <h3 class="text-lg font-bold text-gray-900">David L.</h3>
+          <p class="text-red-600 text-sm font-medium">General Manager</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition text-center">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" class="w-full h-64 object-cover rounded-xl mb-4" alt="Sommelier">
+          <h3 class="text-lg font-bold text-gray-900">Sarah J.</h3>
+          <p class="text-red-600 text-sm font-medium">Sommelier</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold font-heading text-center mb-16">Our Journey</h2>
+      <div class="space-y-12 relative border-l-2 border-red-100 ml-6 md:ml-0">
+        <!-- Item 1 -->
+        <div class="relative pl-12 md:pl-0">
+          <div class="absolute left-[-9px] top-0 w-5 h-5 bg-red-600 rounded-full border-4 border-white md:left-1/2 md:-ml-2.5"></div>
+          <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+            <div class="md:text-right">
+              <span class="text-red-600 font-bold text-xl block mb-2">1998</span>
+              <h3 class="text-2xl font-bold text-gray-900">The Beginning</h3>
+              <p class="text-gray-600 mt-2">Giovanni opens his first food truck in downtown, serving slices to busy office workers.</p>
+            </div>
+            <div class="hidden md:block"></div>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="relative pl-12 md:pl-0">
+          <div class="absolute left-[-9px] top-0 w-5 h-5 bg-red-600 rounded-full border-4 border-white md:left-1/2 md:-ml-2.5"></div>
+          <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+            <div class="hidden md:block"></div>
+            <div>
+              <span class="text-red-600 font-bold text-xl block mb-2">2005</span>
+              <h3 class="text-2xl font-bold text-gray-900">First Location</h3>
+              <p class="text-gray-600 mt-2">We opened our flagship brick-and-mortar restaurant. The wood-fired oven was imported from Naples.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="relative pl-12 md:pl-0">
+          <div class="absolute left-[-9px] top-0 w-5 h-5 bg-red-600 rounded-full border-4 border-white md:left-1/2 md:-ml-2.5"></div>
+          <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+            <div class="md:text-right">
+              <span class="text-red-600 font-bold text-xl block mb-2">2023</span>
+              <h3 class="text-2xl font-bold text-gray-900">Best Pizza Award</h3>
+              <p class="text-gray-600 mt-2">Voted "Best Pizza in the City" for the 5th consecutive year by local food critics.</p>
+            </div>
+            <div class="hidden md:block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-red-600 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold font-heading mb-6">Taste the Tradition</h2>
+      <p class="text-xl text-red-100 mb-8">Come visit us and see why we've been a local favorite for over 25 years.</p>
+      <a href="contact.html" class="bg-white text-red-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg">Visit Us Today</a>
+    </div>
+  </section>
+
+  <!-- FOOTER (Same as index) -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-gray-500">&copy; 2024 Napoli & Co. Pizzeria. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+(function() {
+  const fallbackImages = ["1522071820080-37f2cb85c41d","1497366216548-37526070297c","1556761175-4bda37b9dd37","1556761175-b4136fa58510","1552664736-d46ed1db83d9","1556761175-5973dc0f32e7","1556761175-5973dc0f32e8","1556761175-5973dc0f32e9","1556761175-5973dc0f32ea","1556761175-5973dc0f32eb"];
+  let fallbackIndex = 0;
+  
+  function getFallbackImageUrl() {
+    if (fallbackIndex >= fallbackImages.length) {
+      fallbackIndex = 0;
+    }
+    const imageId = fallbackImages[fallbackIndex];
+    fallbackIndex++;
+    return 'https://images.unsplash.com/' + imageId + '?w=800&h=600&fit=crop';
+  }
+  
+  function handleImageError(img) {
+    const originalSrc = img.getAttribute('data-original-src') || img.src;
+    
+    if (!img.getAttribute('data-original-src')) {
+      img.setAttribute('data-original-src', originalSrc);
+      img.setAttribute('data-fallback-attempts', '0');
+    }
+    
+    const attempts = parseInt(img.getAttribute('data-fallback-attempts') || '0');
+    
+    if (attempts < 5) {
+      img.setAttribute('data-fallback-attempts', (attempts + 1).toString());
+      img.src = getFallbackImageUrl();
+    } else {
+      img.style.display = 'none';
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+      if (!img.onerror) {
+        img.onerror = function() { handleImageError(img); };
+      }
+    });
+  });
+  
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) {
+          if (node.tagName === 'IMG') {
+            node.onerror = function() { handleImageError(node); };
+          }
+          const images = node.querySelectorAll && node.querySelectorAll('img');
+          if (images) {
+            images.forEach(function(img) {
+              if (!img.onerror) {
+                img.onerror = function() { handleImageError(img); };
+              }
+            });
+          }
+        }
+      });
+    });
+  });
+  
+  observer.observe(document.body || document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script>
+<script>
+(function() {
+  const fallbackImages = ["1522071820080-37f2cb85c41d","1497366216548-37526070297c","1556761175-4bda37b9dd37","1556761175-b4136fa58510","1552664736-d46ed1db83d9","1556761175-5973dc0f32e7","1556761175-5973dc0f32e8","1556761175-5973dc0f32e9","1556761175-5973dc0f32ea","1556761175-5973dc0f32eb"];
+  let fallbackIndex = 0;
+  
+  function getFallbackImageUrl() {
+    if (fallbackIndex >= fallbackImages.length) {
+      fallbackIndex = 0;
+    }
+    const imageId = fallbackImages[fallbackIndex];
+    fallbackIndex++;
+    return 'https://images.unsplash.com/' + imageId + '?w=800&h=600&fit=crop';
+  }
+  
+  function handleImageError(img) {
+    const originalSrc = img.getAttribute('data-original-src') || img.src;
+    
+    if (!img.getAttribute('data-original-src')) {
+      img.setAttribute('data-original-src', originalSrc);
+      img.setAttribute('data-fallback-attempts', '0');
+    }
+    
+    const attempts = parseInt(img.getAttribute('data-fallback-attempts') || '0');
+    
+    if (attempts < 5) {
+      img.setAttribute('data-fallback-attempts', (attempts + 1).toString());
+      img.src = getFallbackImageUrl();
+    } else {
+      img.style.display = 'none';
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+      if (!img.onerror) {
+        img.onerror = function() { handleImageError(img); };
+      }
+    });
+  });
+  
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) {
+          if (node.tagName === 'IMG') {
+            node.onerror = function() { handleImageError(node); };
+          }
+          const images = node.querySelectorAll && node.querySelectorAll('img');
+          if (images) {
+            images.forEach(function(img) {
+              if (!img.onerror) {
+                img.onerror = function() { handleImageError(img); };
+              }
+            });
+          }
+        }
+      });
+    });
+  });
+  
+  observer.observe(document.body || document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script></body>
+</html>
